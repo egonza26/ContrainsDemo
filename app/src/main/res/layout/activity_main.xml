@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ernestog.contrainsdemo.MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        app:srcCompat="@drawable/landscape"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="150dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:id="@+id/imageView2"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteY="121dp"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:text="Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/locationID"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Yosemith Lake"
+        android:ems="10"
+        android:id="@+id/locationID"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.58" />
+
+    <TextView
+        android:text="Date"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@+id/textView"
+        android:layout_width="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateID" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="April 6, 2017"
+        android:ems="10"
+        android:id="@+id/dateID"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/locationID"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/locationID" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="textMultiLine|textPersonName"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dateID"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue porttitor quam ut placerat. Ut pellentesque ligula at nulla rhoncus sodales a vel eros. Etiam justo elit, sodales at tempus a, mattis et arcu. "
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.32999998"
+        android:gravity="top|center_vertical" />
+
+    <Button
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp" />
+</android.support.constraint.ConstraintLayout>
